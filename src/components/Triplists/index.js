@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react'
+import './index.css'
 
 
 export default function Index() {
@@ -20,20 +21,25 @@ export default function Index() {
     console.log(trips);
     
   return (
-    <div>
-        <h1>Ready to go?</h1>
-        <button onClick={()=>setUrl("http://localhost:3000/trips")}>All</button>
-        <button onClick={()=>setUrl("http://localhost:3000/trips?location=Myanmar")}>Tirp in Myanmar</button>
-        <ul>
-            {trips.map(trip=>(
-                <li key={trip.id}>
-                    <h3>{trip.name}</h3>
-                    <p>price - {trip.price} MMK</p>
-                    <p>location- {trip.location}</p>
-                </li>
-            ))}
+    <div className='container'>
+        <div className="flex-container">
+            <h1>Ready to go?</h1>
+            <div>
+                <button onClick={()=>setUrl("http://localhost:3000/trips")}>All</button>
+                <button onClick={()=>setUrl("http://localhost:3000/trips?location=Myanmar")}>Tirp in Myanmar</button>
             
-        </ul>
+            </div>
+            <ul className='trips-list'>
+                {trips.map(trip=>(
+                    <li key={trip.id} className="trip">
+                        <h3>{trip.name}</h3>
+                        <p>price - {trip.price} MMK</p>
+                        <p>location- {trip.location}</p>
+                    </li>
+                ))}
+                
+            </ul>
+        </div>
     </div>
   )
 }
