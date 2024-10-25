@@ -1,16 +1,22 @@
 {
     "trips" : [
         {
+            "id" : 1,
             "name" : "2 nights at Chaung Tha",
-            "price" : 100000
+            "price" : 100000,
+            "location" : "Myanmar"
         },
         {
+            "id" : 2,
             "name" : "4 nights at Nge Saung",
-            "price" : 100000
+            "price" : 100000,
+            "location" : "Myanmar"
         },
         {
+            "id" : 3,
             "name" : "3 nights at Kalaw",
-            "price" : 100000
+            "price" : 100000,
+            "location" : "Thailand"
         }
     ]
 }
