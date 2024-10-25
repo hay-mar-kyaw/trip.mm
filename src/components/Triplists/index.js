@@ -1,17 +1,21 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 
 
 export default function Index() {
     let [trips,setTrip] = useState([]);
     let [url,setUrl] = useState("http://localhost:3000/trips")
 
-    useEffect(() => {
+    let fetchTrip = useCallback(() =>{
         fetch(url)
         .then(res=> res.json())
         .then(data => {
             setTrip(data);
         })
-    }, [url]);
+    },[url])
+
+    useEffect(() => {
+        fetchTrip();
+    }, [fetchTrip]);
 
     console.log(trips);
     
