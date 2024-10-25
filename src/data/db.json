@@ -1,0 +1,16 @@
+{
+    "trips" : [
+        {
+            "name" : "2 nights at Chaung Tha",
+            "price" : 100000
+        },
+        {
+            "name" : "4 nights at Nge Saung",
+            "price" : 100000
+        },
+        {
+            "name" : "3 nights at Kalaw",
+            "price" : 100000
+        }
+    ]
+}
